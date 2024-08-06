@@ -49,4 +49,12 @@ class ServiceController extends Controller
         ],200);
 
     }
+
+    public function latestAdd() {
+        $service = Service::with('services')->get();
+
+        return response()->json([
+            'data' => $service
+        ],200);
+    }
 }

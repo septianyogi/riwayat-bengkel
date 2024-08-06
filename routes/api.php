@@ -19,4 +19,6 @@ Route::get('/service', [ServiceController::class, 'show']);
 
 Route::get('/service/{plat}', [ServiceController::class , 'searchplat']);
 
-Route::post('/service/post', [ServiceController::class, 'store']);
+Route::post('/service/store', [ServiceController::class, 'store']);
+
+Route::get('/service/latestAdd', [ServiceController::class, 'latestAdd']);
